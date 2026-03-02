@@ -1,0 +1,339 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+	margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+body {
+	/* 4. Add accessible line-height */
+	line-height: 1.5;
+	/* 5. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Variable collection */
+:root {
+	/* Mode 1 */
+	/* color */
+	--colors-black: #000000;
+	--colors-white: #ffffff;
+	--colors-grey-500: #969fad;
+	--colors-grey-900: #262e38;
+	--colors-grey-950: #131518;
+	--colors-orange-500: #fc7614;
+	/* number */
+	--spacing-0: 0rem;
+	--spacing-100: 0.8rem;
+	--spacing-200: 1.6rem;
+	--spacing-300: 2.4rem;
+	--spacing-400: 3.2rem;
+	--spacing-500: 4rem;
+	--spacing-1300: 10.4rem;
+	--spacing-1700: 13.6rem;
+
+	--ff-overpass: "Overpass", sans-serif;
+
+	--fw-regular: 400;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	/* === Text Preset 1 === */
+	--tp-1-font: var(--fw-bold) 2.8rem / 3.5rem var(--ff-overpass);
+	--tp-1-ls: 0;
+
+	/* === Text Preset 2 === */
+	--tp-2-font: var(--fw-bold) 2.4rem / 3rem var(--ff-overpass);
+	--tp-2-ls: 0;
+
+	/* === Text Preset 3 === */
+	--tp-3-font: var(--fw-bold) 1.6rem / 2.4rem var(--ff-overpass);
+	--tp-3-ls: 0.02rem; /* 0.2px */
+
+	/* === Text Preset 4 Bold === */
+	--tp-4-bold-font: var(--fw-bold) 1.5rem / 1.9rem var(--ff-overpass);
+	--tp-4-bold-ls: 0.2rem; /* 2px */
+
+	/* === Text Preset 4 Regular === */
+	--tp-4-regular-font: var(--fw-regular) 1.5rem / 2.4rem var(--ff-overpass);
+	--tp-4-regular-ls: 0;
+
+	/* === Text Preset 5 Bold === */
+	--tp-5-bold-font: var(--fw-bold) 1.4rem / 1.8rem var(--ff-overpass);
+	--tp-5-bold-ls: 0.187rem; /* 1.87px */
+
+	/* === Text Preset 5 SemiBold === */
+	--tp-5-semibold-font: var(--fw-semibold) 1.4rem / 2.4rem var(--ff-overpass);
+	--tp-5-semibold-ls: 0.017rem; /* 0.17px */
+
+	/* === Text Preset 5 Regular === */
+	--tp-5-regular-font: var(--fw-regular) 1.4rem / 2.2rem var(--ff-overpass);
+	--tp-5-regular-ls: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-inline: var(--spacing-300);
+	min-height: 100vh;
+	color: var(--colors-grey-500);
+	background: var(--colors-grey-950);
+}
+main {
+	width: 327px;
+	height: 360px;
+
+	padding: 28.5px 24px;
+	border-radius: 15px;
+	background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+	font-family: var(--ff-overpass);
+	font-size: 1.5rem;
+}
+.star {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background: var(--colors-grey-900);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: var(--spacing-300);
+}
+
+main h1 {
+	color: var(--colors-white);
+	font: var(--tp-2-font);
+	letter-spacing: var(--tp-2-ls);
+}
+.rating-content p {
+	margin-block: var(--spacing-200);
+	font: var(--tp-5-regular-font);
+	letter-spacing: var(--tp-5-regular-ls);
+}
+.ratings {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: var(--spacing-300);
+}
+.rating-number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 42px;
+	height: 42px;
+
+	gap: var(--spacing-100, 8px);
+	border-radius: 21px;
+	background: var(--colors-grey-900, #262e38);
+	color: var(--colors-grey-500, #969fad);
+	text-align: center;
+	font-feature-settings:
+		"liga" off,
+		"clig" off;
+
+	/* Text Preset 5 (Bold) - Overpass Bold - 14px - 18px Line Height - 1.87px Line Spacing */
+	font-family: Overpass;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.rating-number:hover {
+	background: var(--colors-orange-500);
+	color: var(--colors-white);
+}
+.active-rating-number {
+	background: var(--colors-white);
+	color: var(--colors-grey-900);
+}
+button {
+	width: 100%;
+	height: 45px;
+	border-radius: 22.5px;
+	border-style: none;
+	background: var(--colors-orange-500);
+
+	display: flex;
+	padding: var(--spacing-200, 16px) var(--spacing-1300, 104px);
+	justify-content: center;
+	align-items: center;
+	color: var(--colors-grey-950);
+	font: var(--tp-5-bold-font);
+	letter-spacing: var(--tp-5-bold-ls);
+	line-height: 1;
+	cursor: pointer;
+	transition: 0.3s;
+}
+button:hover {
+	background: var(--colors-white);
+}
+
+.thanks-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+.thanks-page .selected-rating-container {
+	height: 32px;
+	background: var(--colors-grey-900);
+	color: var(--colors-orange-500);
+
+	padding: var(--spacing-0) var(--spacing-200);
+	padding-top: 4px;
+	gap: 3px;
+	border-radius: 22.5px;
+	font: var(--tp-5-regular-font);
+	letter-spacing: var(--tp-5-regular-ls);
+	margin-block: var(--spacing-300);
+	line-height: 1;
+	display: flex;
+	align-items: center;
+}
+.thanks-page h2 {
+	margin-bottom: var(--spacing-200);
+	color: var(--colors-white);
+}
+.thanks-page img {
+	width: 144px;
+	height: 96px;
+}
+.thanks-page p {
+	font: var(--tp-5-regular-font);
+	letter-spacing: var(--tp-5-regular-ls);
+}
+
+.hidden {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	main {
+		padding: var(--spacing-400) var(--spacing-300);
+		width: 41.2rem;
+		height: 41.6rem;
+	}
+	.star {
+		margin-bottom: var(--spacing-400);
+		width: 4.8rem;
+		height: 4.8rem;
+	}
+	.rating-content h1 {
+		font: var(--tp-1-font);
+		letter-spacing: var(--tp-1-ls);
+	}
+	.rating-content p {
+		font: var(--tp-4-regular-font);
+		letter-spacing: var(--tp-4-regular-ls);
+	}
+	.rating-number {
+		width: 5.1rem;
+		height: 5.1rem;
+		border-radius: 50%;
+		font: var(--tp-3-font);
+		line-height: 1;
+		padding-top: 2px;
+	}
+	.ratings {
+		margin-bottom: var(--spacing-400);
+	}
+	button {
+		font: var(--tp-5-semibold-font);
+		letter-spacing: var(--tp-5-semibold-ls);
+	}
+
+	.thanks-page {
+	}
+	.thanks-page img {
+		width: 162px;
+		height: 108px;
+	}
+	.thanks-page .selected-rating-container {
+		margin-block: var(--spacing-400);
+		font-family: Overpass;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px;
+		font-feature-settings:
+			"liga" off,
+			"clig" off;
+	}
+
+	.thanks-page h2 {
+		font: var(--tp-1-font);
+		letter-spacing: var(--tp-1-ls);
+	}
+	.thanks-page p {
+		font: var(--tp-4-regular-font);
+		letter-spacing: var(--tp-4-regular-ls);
+	}
+}
