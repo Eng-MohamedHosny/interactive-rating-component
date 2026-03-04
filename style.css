@@ -77,6 +77,7 @@ h6 {
 /* Variable collection */
 :root {
 	/* Mode 1 */
+	
 	/* color */
 	--colors-black: #000000;
 	--colors-white: #ffffff;
@@ -241,6 +242,7 @@ button:hover {
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
+	 --animate-duration: 1s;
 }
 .thanks-page .selected-rating-container {
 	height: 32px;
@@ -261,6 +263,8 @@ button:hover {
 .thanks-page h2 {
 	margin-bottom: var(--spacing-200);
 	color: var(--colors-white);
+	--animate-duration: 2s;
+	--animate-delay: 1s;
 }
 .thanks-page img {
 	width: 144px;
