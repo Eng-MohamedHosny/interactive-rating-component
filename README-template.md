@@ -1,124 +1,72 @@
-# Frontend Mentor - Interactive rating component solution
-
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+# Interactive Rating Component
 
 ## Overview
 
-### The challenge
+This project is an interactive rating component built to practice JavaScript event handling, DOM manipulation, and dynamic UI updates using pure HTML, CSS, and JavaScript.
 
-Users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Select and submit a number rating
-- See the "Thank you" card state after submitting a rating
+The user can select a rating between **1 and 5**, submit the feedback, and then see a **thank you state** that displays the selected rating with a smooth UI transition and simple animations.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<img src="./design/desktop-design.jpg" alt="Interactive Rating Component Screenshot" width="600">
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- 🌐 Live Site: https://eng-mohamedhosny.github.io/interactive-rating-component/
+- 💻 Repository: https://github.com/Eng-MohamedHosny/interactive-rating-component
 
-## My process
+---
 
-### Built with
+## 🚀 Features
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+### ⭐ Interactive Rating Selection
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+Users can choose a rating between **1 and 5**.  
+The selected rating is visually highlighted to clearly indicate the user's choice.
 
-### What I learned
+---
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### 📩 Dynamic Submission State
 
-To see how you can add code snippets, see below:
+After submitting the rating:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+- The rating component is replaced with a **Thank You state**.
+- The selected rating is displayed dynamically.
+- The UI transitions smoothly to the confirmation screen.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+---
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+### 🎨 Clean UI & Animations
 
-### Continued development
+The project includes:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Smooth UI transitions.
+- Hover and active states for rating buttons.
+- A clean and modern card-based design.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+---
 
-### Useful resources
+### ⚡ Dynamic DOM Updates
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+JavaScript is used to:
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Capture the selected rating.
+- Update the interface after submission.
+- Render the thank-you state dynamically without reloading the page.
 
-### AI Collaboration
+---
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+## 🛠️ Built With
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+No frameworks or external libraries were used in this project.
 
-## Author
+---
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+## 👤 Author
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- GitHub: [Eng-MohamedHosny](https://github.com/Eng-MohamedHosny)
+- Frontend Mentor: [Eng-Mohamed Hosny](https://www.frontendmentor.io/profile/Eng-MohamedHosny)
